@@ -6,9 +6,9 @@ function rot13(sentence) {
   for (let index = 0; index < sentence.length; index += 1) {
     let currentChar = sentence[index];
     if (currentChar >= 'a' && currentChar <= 'z') {
-      currentChar = rotateLower(currentChar);
+      currentChar = rotateLetter(currentChar, 'z');
     } else if (currentChar >= 'A' && currentChar <= 'Z') {
-      currentChar = rotateUpper(currentChar);
+      currentChar = rotateLetter(currentChar, 'Z');
     }
 
     code += currentChar;
@@ -17,18 +17,9 @@ function rot13(sentence) {
   return code;
 }
 
-function rotateLower(letter) {
+function rotateLetter(letter, maxChar) {
   let rotate_ascii = letter.charCodeAt(0) + ROTATE_FACTOR;
-  if (rotate_ascii > 'z'.charCodeAt(0)) {
-    rotate_ascii -= TOTAL_LETTERS;
-  }
-
-  return String.fromCharCode(rotate_ascii);
-}
-
-function rotateUpper(letter) {
-  let rotate_ascii = letter.charCodeAt(0) + ROTATE_FACTOR;
-  if (rotate_ascii > 'Z'.charCodeAt(0)) {
+  if (rotate_ascii > maxChar.charCodeAt(0)) {
     rotate_ascii -= TOTAL_LETTERS;
   }
 
