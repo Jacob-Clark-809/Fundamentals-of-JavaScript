@@ -1,0 +1,13 @@
+## Fundamentals of JavaScript
+
+Small exercises exploring fundamental JavaScript.
+
+Topics include:
+- data structures
+- flow control
+- functions
+- variable scope
+- hoisting
+- chrome dev tools
+- math and date
+- syntactic_sugar
