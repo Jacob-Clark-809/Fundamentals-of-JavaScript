@@ -1,6 +1,6 @@
 ## Fundamentals of JavaScript
 
-Small exercises exploring fundamental JavaScript.
+Exercises exploring fundamental JavaScript.
 
 Topics include:
 - data structures
